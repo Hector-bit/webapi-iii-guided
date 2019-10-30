@@ -11,7 +11,7 @@ function dateLogger(req, res, next) {
 }
 
 function httpLogger(req, res, next){
-  console.log()
+  console.log(res.status(200).json(req))
 }
 
 //global middleware
