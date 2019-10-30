@@ -4,6 +4,16 @@ const hubsRouter = require('./hubs/hubs-router.js');
 
 const server = express();
 
+function dateLogger(req, res, next) {
+  console.log(new Date().toISOString());
+
+  next();
+}
+
+function httpLogger(req, res, next){
+  console.log()
+}
+
 //global middleware
 server.use(helmet())
 
